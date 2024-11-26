@@ -11,18 +11,80 @@
     <h1>Random Word Game</h1>
     <p class="instructions">Guess the random word! Enter your guess below and see the results on the grid.</p>
 
-    <!-- Word Grid -->
+
+    <!-- Word Grid
     <div class="word-grid">
-        <div class="grid-cell">A</div>
-        <div class="grid-cell correct">P</div>
-        <div class="grid-cell present">P</div>
-        <div class="grid-cell">L</div>
-        <div class="grid-cell absent">E</div>
+        <div class="grid-cell empty">A</div>
+        <div class="grid-cell empty">P</div>
+        <div class="grid-cell empty">P</div>
+        <div class="grid-cell empty">L</div>
+        <div class="grid-cell empty">E</div>
+        <div class="grid-cell empty">E</div>
+    </div>
+    -->
+
+    <div class="board-container">
+        <div class="board-row" id="row-1">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-2">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-3">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-4">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-5">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-6">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
+        <div class="board-row" id="row-7">
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+            <div class="board-cell"></div>
+        </div>
     </div>
 
     <!-- Input and Button -->
     <div class="guess-input">
-        <input type="text" id="guess" placeholder="Enter your guess" maxlength="5">
+        <input type="text" id="guess" placeholder="Enter your guess" maxlength="6">
         <button id="submit-guess">Submit</button>
     </div>
 
@@ -31,17 +93,7 @@
     </div>
 </div>
 
-<script>
-        const submitButton = document.getElementById('submit-guess');
-        submitButton.addEventListener('click', () => {
-            const guess = document.getElementById('guess').value;
-            if (guess.length === 6) {
-                alert(`You guessed: ${guess}`);
-                // Logic to process guess would go here
-            } else {
-                alert('Please enter a 6-letter word.');
-            }
-        });
-    </script>
+
+<script type="text/javascript" th:src="@{/js/random.js}"></script>
 </body>
 </html>
