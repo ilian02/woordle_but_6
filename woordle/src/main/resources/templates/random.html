@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/random.css}">
+    <title>Random Word Game</title>
+</head>
+<body>
+<div class="container">
+    <h1>Random Word Game</h1>
+    <p class="instructions">Guess the random word! Enter your guess below and see the results on the grid.</p>
+
+    <!-- Word Grid -->
+    <div class="word-grid">
+        <div class="grid-cell">A</div>
+        <div class="grid-cell correct">P</div>
+        <div class="grid-cell present">P</div>
+        <div class="grid-cell">L</div>
+        <div class="grid-cell absent">E</div>
+    </div>
+
+    <!-- Input and Button -->
+    <div class="guess-input">
+        <input type="text" id="guess" placeholder="Enter your guess" maxlength="5">
+        <button id="submit-guess">Submit</button>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 WordPlay. All rights reserved.</p>
+    </div>
+</div>
+
+<script>
+        const submitButton = document.getElementById('submit-guess');
+        submitButton.addEventListener('click', () => {
+            const guess = document.getElementById('guess').value;
+            if (guess.length === 6) {
+                alert(`You guessed: ${guess}`);
+                // Logic to process guess would go here
+            } else {
+                alert('Please enter a 6-letter word.');
+            }
+        });
+    </script>
+</body>
+</html>
