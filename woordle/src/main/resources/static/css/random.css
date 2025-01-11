@@ -38,10 +38,15 @@ h1 {
 }
 
 .board-cell {
-    height: 50px;
-    width: 50px;
-    border: 1px solid grey;
-    dispay: flex;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 50px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    border: 1px solid #ccc; /* Optional: Add a border for visibility */
+    text-align: center; /* Ensures text alignment if multi-line */
+    font-size: 28px; /* Increase font size */
+    font-weight: bold; /* Optional: Make the text bold */
 }
 
 
@@ -80,4 +85,16 @@ h1 {
     margin-top: 20px;
     font-size: 0.9rem;
     color: #7f8c8d;
+}
+
+.green {
+    background-color: limegreen;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.yellow {
+    background-color: yellow;
 }
